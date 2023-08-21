@@ -16,6 +16,9 @@ app.get('/carsMaster', (req, res) => {
     res.json(carMasterData);
 
 })
+app.get("/",(req,res)=>{
+res.send("backend is working fine");
+})
 app.get('/cars', (req, res) => {
     let filteredCars = [...carsData];
 
