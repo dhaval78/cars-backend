@@ -45,7 +45,9 @@ app.get('/cars', (req, res) => {
     } else if (sort === 'price') {
         filteredCars.sort((a, b) => a.price - b.price);
     }
-
+    else if (sort === 'year') {
+        filteredCars.sort((a, b) => a.year - b.year);
+    }
     res.json(filteredCars);
 });
 app.get('/cars/:id', (req, res) => {
